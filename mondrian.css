@@ -1,0 +1,94 @@
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	display: flex;
+	background-color: blue;
+}
+
+.wide-col {
+	height: 100%;
+	width: 65%;
+}
+
+.narrow-col {
+	height: 100%;
+	width: 35%;
+}
+
+.box {
+	height: calc(100%/2);
+	width: 100%; 
+}
+
+.blue {background-color: #0D11A8;}
+.red {background-color: #F50F0F;}
+.yellow {background-color: #FAE317;}
+.image2 {content: url("images/cubegrandetransparent.png");}
+
+/* 
+.image {content: url("images/sansdefault.gif");}
+.image3 {content: url("images/ericandre.png");}
+*/
+
+.center-horizontal {
+	align-items: center;
+	display: flex;
+}
+
+.center-vertical {
+	justify-content: center;
+	display: flex;
+}
+
+.contain-image {
+	max-height: 75%;
+	max-width: 75%;
+}
+
+@media only screen and (max-width: 850px) {
+	.narrow-col {
+		display: flex;
+		width: 100%;
+		height: 100%;
+	}
+	
+	.wide-col {
+		display: flex;
+		width: 100%;
+		height: calc(100%/2);
+	}
+	
+	body {
+		display: block;
+		overflow: hidden;
+	}
+	
+	/* Changing original colors to completely different colors */
+	.blue {background-color: #9AFF94;}
+	.red {background-color: #280073;}
+	.yellow {background-color: #FF0707;}
+}
+
+@media only screen and (max-width: 500px) {
+	.narrow-col {
+		display: block;
+	}
+	
+	body {
+		overflow: scroll;
+	}
+	
+	.blue {background-image: url("images/ericandre.png");}
+	.red {background-image: linear-gradient(red, white, red);}
+	.yellow {background-image: url("images/dolan.png");}
+	
+	/* Image will be hidden until screen size reaches 500px */
+	.image {
+		content: url("images/sansdefault.gif");
+	}
+	
+	.image3 {
+		content: url("images/ericandre.png");
+	}
+}
